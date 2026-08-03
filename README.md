@@ -1,6 +1,5 @@
 # Bash_Scripting
 Devops_Shellscripting
 
-this is personal Access Token- 
+Repo URL- https://github.com/AaravKulshreshtha/Bash_Scripting.git
 
-"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"
