@@ -26,8 +26,8 @@ echo -e "hello \n Anshul \t welcome back"
 
 # Write a Bash script that uses command substitution to display the current date and time using the date command.
 
-current_DateTime = $(date)
-echo "current Date time : $current_DateTime"
+#current_datetime=$(date)
+echo "current Date time : $date"
 
 # Write a Bash script that uses the cat command to concatenate the contents of two text files ("file1.txt" and "file2.txt") and display the result.
 
