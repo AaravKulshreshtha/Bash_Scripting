@@ -137,3 +137,11 @@ echo "Called dev null"
 ls | grep  '\.txt$' 
 
 #cat < output10.txt
+
+# Write a Bash script that uses input redirection to read a number from a file named "nums.txt" and then performs some arithmetic operation on it.
+
+read number < num.txt
+result1=a*2
+result1=b*2
+echo "result of a is $result"
+echo "result of b is $result"
