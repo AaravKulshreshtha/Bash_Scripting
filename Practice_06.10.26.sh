@@ -67,4 +67,4 @@ echo "Current date time is $current_datetime"
 
 colors=("Red" , "Blue"  "Black"  "Green")
 
-echo "My favourite color is ${color[@]}"
+echo "My favourite color is ${colors[@]}"
