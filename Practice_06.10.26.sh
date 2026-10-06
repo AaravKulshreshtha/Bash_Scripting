@@ -34,3 +34,13 @@ name="Anshul"
 last="Kulshreshtha"
 
 echo "$name  $last"
+
+# Write a Bash script that declares a variable named "x" and assign it a numeric value. Then, reassign it to a different value and print the updated value.
+
+x=200
+
+echo "value of x before reassignment is $x"
+
+x=300
+
+echo "value of x after reassignment is $x"
