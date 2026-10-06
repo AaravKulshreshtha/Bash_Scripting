@@ -126,5 +126,9 @@ cat log.txt
 
 echo " output redirction to /dev/null" >> /dev/null
 
+echo "Calling dev null"
+
 cat < /dev/null
+
+echo "Called dev null"
 
