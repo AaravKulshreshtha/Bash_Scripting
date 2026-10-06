@@ -83,4 +83,6 @@ echo "$?"
 
 ls > test.txt
 
-cat test.txt
+# Write a Bash script that uses  input redirection to read the contents of a file named "exec_stderr.txt" and then echoes those contents to the terminal.
+
+cat < test.txt
