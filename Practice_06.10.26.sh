@@ -117,6 +117,6 @@ cat error.log
 
 echo "Today date is : " > log.txt
 
-echo $date >> log.txt
+echo "$date" >> log.txt
 
 cat log.txt
