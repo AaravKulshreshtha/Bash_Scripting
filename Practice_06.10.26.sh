@@ -19,3 +19,11 @@ echo "Hello welcome back Mr. $firstName $LastName"
 age=20
 
 echo "Hello My age is $age"
+
+#Write a Bash script that prompts the user to input their favorite mobile. Store the input in a variable named "mobile" and display a message including their favorite mobile
+
+echo "Enter your Mobile_No"
+
+read Mobile
+
+echo "My Favourite Mobile no is $Mobile"
