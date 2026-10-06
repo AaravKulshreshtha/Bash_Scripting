@@ -68,3 +68,13 @@ echo "Current date time is $current_datetime"
 colors=("Red" , "Blue"  "Black"  "Green")
 
 echo "My favourite color is ${colors[@]}"
+
+#Write a Bash script that utilizes special variables like $0, $#, $@, and $? in a script and display their values.
+
+echo "$0"
+
+echo "$#"
+
+echo "$@"
+
+echo "$?"
