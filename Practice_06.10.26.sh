@@ -44,3 +44,14 @@ echo "value of x before reassignment is $x"
 x=300
 
 echo "value of x after reassignment is $x"
+
+#Write a Bash script with a variable declared inside a function. Try to access the variable outside the function and observe the result.
+
+anshul(){
+    fullname="Anshulkulshreshtha"
+    echo "my name is $fullname"
+}
+
+anshul
+
+echo "my full name is $fullname"
