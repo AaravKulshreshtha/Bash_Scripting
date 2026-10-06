@@ -159,3 +159,5 @@ line 1 is 159.
 line 2 is 160.
 line 3 is 161.
 EOF
+
+cat output157.txt
