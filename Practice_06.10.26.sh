@@ -147,3 +147,7 @@ result1=$((number*2))
 result2=$((b*2))
 echo "result of a is $result1"
 echo "result of b is $result2"
+
+# Write a Bash script that redirects the output of a command to both the terminal and a file simultaneously, using the tee command.
+
+ls -l | tee > output153.txt
