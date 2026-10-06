@@ -104,3 +104,13 @@ echo "line 102"
 
 cat < output.txt
 
+#Write a Bash script that redirects the standard error (stderr) of a command to a file named "error.log".
+
+echo "Error log"
+
+ECHOOO 2> error.log
+
+cat error.log
+
+
+
