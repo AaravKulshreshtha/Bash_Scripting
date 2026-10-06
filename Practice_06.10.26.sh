@@ -100,3 +100,7 @@ echo "output Redirction"
 
 cat < input.txt > output.txt
 
+echo "line 102"
+
+cat < output.txt
+
