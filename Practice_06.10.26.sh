@@ -113,4 +113,8 @@ ECHOOO 2> error.log
 cat error.log
 
 
+# Write a Bash script that appends the output of the date command to a file named "log.txt" without overwriting its existing contents
 
+echo "Today date is : " > log.txt
+
+echo $date >> log.txt
