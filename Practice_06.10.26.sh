@@ -62,3 +62,9 @@ echo "my full name is $fullname"
 current_datetime=$(date)
 
 echo "Current date time is $current_datetime"
+
+#Write a Bash script that declares an array named "colors" containing the names of your favorite colors. Print the entire array.
+
+colors=("Red" , "Blue" , "Black" , "Green")
+
+echo "My favourite color is ${color[@]}"
