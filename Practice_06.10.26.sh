@@ -120,3 +120,11 @@ echo "Today date is : " > log.txt
 echo "$(date)" >> log.txt
 
 cat log.txt
+
+
+# Write a Bash script that redirects the output of the echo command to /dev/null to suppress any output.
+
+echo " output redirction to /dev/null" >> /dev/null
+
+cat < /dev/null
+
