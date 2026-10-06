@@ -89,3 +89,13 @@ ls > test.txt
 echo "Input redirection"
 
 cat < test.txt
+
+#Write a Bash script that uses both input and output redirection to read the contents of a file named "input.txt" and write them to a new file named "output.txt".
+
+ls > input.txt
+
+cat < input.txt 
+
+input.txt > output.txt
+
+cat < output.txt 
