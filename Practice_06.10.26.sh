@@ -96,6 +96,7 @@ ls > input.txt
 
 cat < input.txt 
 
-input.txt > output.txt
+echo "output Redirction"
 
-cat < output.txt 
+cat < input.txt > output.txt
+
