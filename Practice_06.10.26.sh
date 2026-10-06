@@ -33,4 +33,4 @@ echo "My Favourite Mobile no is $Mobile"
 name="Anshul"
 last="Kulshreshtha"
 
-echo "$name $Last"
+echo "$name  $last"
