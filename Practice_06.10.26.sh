@@ -80,9 +80,12 @@ echo "$@"
 echo "$?"
 
 # Write a Bash script that redirects the output of the ls command to a file named "test.txt". Print the content of list.txt.
+echo "Output redirection"
 
 ls > test.txt
 
 # Write a Bash script that uses  input redirection to read the contents of a file named "exec_stderr.txt" and then echoes those contents to the terminal.
+
+echo "Input redirection"
 
 cat < test.txt
