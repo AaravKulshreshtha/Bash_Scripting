@@ -27,3 +27,10 @@ echo "Enter your Mobile_No"
 read Mobile
 
 echo "My Favourite Mobile no is $Mobile"
+
+#Write a Bash script that declares two variables, "var1" and "var2", and assign them two different words. Concatenate the variables and print the result.
+
+name="Anshul"
+last="Kulshreshtha"
+
+echo "$name $Last"
