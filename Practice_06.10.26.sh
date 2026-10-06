@@ -52,6 +52,6 @@ anshul(){
     echo "my name is $fullname"
 }
 
-#anshul
+anshul
 
 echo "my full name is $fullname"
