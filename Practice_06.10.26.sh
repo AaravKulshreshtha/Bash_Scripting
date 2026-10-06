@@ -71,7 +71,7 @@ echo "My favourite color is ${colors[@]}"
 
 #Write a Bash script that utilizes special variables like $0, $#, $@, and $? in a script and display their values.
 
-echo "$0"
+echo  "currently running script name $0"
 
 echo "$#"
 
