@@ -21,13 +21,13 @@ age=20
 echo "Hello My age is $age"
 
 #Write a Bash script that prompts the user to input their favorite mobile. Store the input in a variable named "mobile" and display a message including their favorite mobile
-
+<<COMMENT
 echo "Enter your Mobile_No"
 
 read Mobile
 
 echo "My Favourite Mobile no is $Mobile"
-
+COMMENT
 #Write a Bash script that declares two variables, "var1" and "var2", and assign them two different words. Concatenate the variables and print the result.
 
 name="Anshul"
