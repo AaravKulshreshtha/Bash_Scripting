@@ -55,3 +55,10 @@ anshul(){
 anshul
 
 echo "my full name is $fullname"
+
+
+#Write a Bash  script that uses command substitution to store the output of the datetime command in a variable named "currentDateTime". Print the value of "currentDateTime".
+
+current_datetime=$(date)
+
+echo "Current date time is $current_datetime"
