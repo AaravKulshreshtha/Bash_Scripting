@@ -154,10 +154,8 @@ ls -l | tee  output153.txt
 
 # Write a Bash script that uses a heredoc to input multi-line text and redirects it to a file named "document.txt".
 
-cat < output157.txt
-line 1 is 159.
-line 2 is 160.
-line 3 is 161.
+cat > output157.txt
+
 EOF
 
-cat output157.txt
+#cat output157.txt
