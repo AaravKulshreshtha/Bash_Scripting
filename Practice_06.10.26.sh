@@ -13,3 +13,9 @@ firstName="Anshul"
 LastName="Kulshreshtha"
 
 echo "Hello welcome back Mr. $firstName $LastName"
+
+# Write a Bash script that declares a variable named "age" and assign it your age. Print a message including your age.
+
+age=20
+
+echo "Hello My age is $age"
