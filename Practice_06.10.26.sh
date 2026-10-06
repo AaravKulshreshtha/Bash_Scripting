@@ -134,6 +134,6 @@ echo "Called dev null"
 
 # Write a Bash script that redirects the output of a command to another command as input, such as ls | grep .txt to list only files with a ".txt" extension.
 
-ls | grep  .txt  >> output10.txt
+ls | grep  .txt  
 
-cat < output10.txt
+#cat < output10.txt
