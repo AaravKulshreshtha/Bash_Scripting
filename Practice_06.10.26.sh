@@ -142,6 +142,6 @@ ls | grep  '\.txt$'
 
 read number < num.txt
 result1=number*2
-result1=b*2
-echo "result of a is $result"
-echo "result of b is $result"
+result2=b*2
+echo "result of a is $result1"
+echo "result of b is $result2"
