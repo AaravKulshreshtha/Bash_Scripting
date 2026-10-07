@@ -21,13 +21,13 @@ Component="Nginx"
 LogPath="/tmp/$1.log"
 
 echo -n  " Start Installating $Component"
-yum install nginx -y   $>> $LogPath
+yum install nginx -y   &>> $LogPath
 stat $?
 
 echo -n "Enabling $Component"
- systemctl enable nginx 
+ systemctl enable nginx  &>> $LogPath
 stat $?
 
 echo -n "Starting $Component"
- systemctl start nginx 
+ systemctl start nginx  &>> $LogPath
  stat $?
