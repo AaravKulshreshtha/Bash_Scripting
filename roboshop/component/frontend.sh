@@ -35,3 +35,40 @@ stat $?
  echo -n "Creating $Component Directory : "
  curl "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >> /tmp/frontend.zip   &>> $LogPath
  stat $?
+
+echo -n "Opening the $Component Hosting Path : "
+cd /usr/share/nginx/html
+stat $?
+
+
+echo -n "Clenup the $Component Hosting Path : "
+rm -rf * 
+stat $?
+
+
+echo -n "unzip Hosting File : "
+unzip /tmp/frontend.zip
+stat $?
+
+
+echo -n "Moving the $Component hosting file : "
+mv frontend-main/* .
+stat $?
+
+echo -n "Moving the $Component static file : "
+mv static/* .
+stat $?
+
+echo -n "deleting the $Component README.md file : "
+rm -rf frontend-master README.md
+stat $?
+
+
+echo -n "raplacing the $Component config file : "
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
+stat $?
+
+
+echo -n "restarting the $Component  : "
+systemctl restart nginx 
+stat $?
