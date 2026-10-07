@@ -21,17 +21,17 @@ Component="Nginx"
 LogPath="/tmp/$1.log"
 
 echo -n  " Start Installating $Component :"
-yum install nginx -y   &>> /tmp/frontend.log
+yum install nginx -y   &>> $LogPath
 stat $?
 
 echo -n "Enabling $Component : "
- systemctl enable nginx   &>> /tmp/frontend.log
+ systemctl enable nginx   &>> $LogPath
 stat $?
 
 echo -n "Starting $Component :"
-systemctl start nginx   &>> /tmp/frontend.log
+systemctl start nginx   &>> $LogPath
 stat $?
 
  echo -n "Creating $Component Directory : "
- curl "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >> /tmp/frontend.zip
+ curl "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >> /tmp/frontend.zip   &>> $LogPath
  stat $?
