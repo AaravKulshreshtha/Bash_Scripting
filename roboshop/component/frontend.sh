@@ -33,7 +33,7 @@ systemctl start nginx   &>> $LogPath
 stat $?
 
  echo -n "Creating $Component Directory : "
- curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"   &>> $LogPath
+ curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"    &>> $LogPath
  stat $?
 
 echo -n "Opening the $Component Hosting Path : "
