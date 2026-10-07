@@ -20,14 +20,18 @@ stat() {
 Component="Nginx"
 LogPath="/tmp/$1.log"
 
-echo -n  " Start Installating $Component"
+echo -n  " Start Installating $Component :"
 yum install nginx -y   &>> /tmp/frontend.log
 stat $?
 
-echo -n "Enabling $Component"
+echo -n "Enabling $Component : "
  systemctl enable nginx   &>> /tmp/frontend.log
 stat $?
 
-echo -n "Starting $Component"
- systemctl start nginx   &>> /tmp/frontend.log
+echo -n "Starting $Component :"
+systemctl start nginx   &>> /tmp/frontend.log
+stat $?
+
+ echo -n "Creating $Component Directory : "
+ curl "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >> /tmp/frontend.zip
  stat $?
