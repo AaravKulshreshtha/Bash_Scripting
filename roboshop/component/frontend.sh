@@ -47,7 +47,7 @@ stat $?
 
 
 echo -n "unzip Hosting File : "
-unzip /tmp/frontend.zip
+unzip /tmp/frontend.zip  &>> $LogPath
 stat $?
 
 
