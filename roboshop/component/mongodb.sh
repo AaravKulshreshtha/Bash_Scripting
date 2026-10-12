@@ -6,7 +6,7 @@ echo "--------------------------------- Mongo DB Configuration Start -----------
 
 ID=$(id -u)
 
-if [ ID -ne 0 ] ; then
+if [ $ID -ne 0 ] ; then
     echo "This script supposed to be run as root user"
     exit 1
 fi
