@@ -55,8 +55,14 @@ echo -n " Start Installating $COMPONENT : "
  stat $?
 
 
-echo "Update $COMPONENT IP : "
+echo -n "Update $COMPONENT IP : "
 
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 
 stat $?
+
+echo -n "RE-Starting $COMPONENT : "
+ 
+ systemctl restart mongod &>> LOGPATH
+
+ stat $?
