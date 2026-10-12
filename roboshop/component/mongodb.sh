@@ -25,10 +25,10 @@ stat(){
 
 echo -n " Setup $COMPONENT repo :  "
 
-cat > /etc/yum.repos.d/mongodb.repo <<'EOF'
+sudo tee /etc/yum.repos.d/mongodb.repo > /dev/null <<'EOF'
 [mongodb-org-7.0]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/7.0/$basearch/
+baseurl=https://repo.mongodb.org/yum/amazon/2023/mongodb-org/7.0/x86_64/
 gpgcheck=1
 enabled=1
 gpgkey=https://pgp.mongodb.com/server-7.0.asc
