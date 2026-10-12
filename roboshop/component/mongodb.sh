@@ -25,14 +25,14 @@ stat(){
 
 echo -n " Setup $COMPONENT repo :  "
 
-sudo tee /etc/yum.repos.d/mongodb.repo > /dev/null <<'EOF'
-[mongodb-org-7.0]
+#sudo tee /etc/yum.repos.d/mongodb.repo > /dev/null <<'EOF'
+echo '[mongodb-org-7.0]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/amazon/2023/mongodb-org/7.0/x86_64/
 gpgcheck=1
 enabled=1
-gpgkey=https://pgp.mongodb.com/server-7.0.asc
-EOF
+gpgkey=https://pgp.mongodb.com/server-7.0.asc' > /etc/yum.repos.d/mongodb.repo
+
 
 stat $?
 
