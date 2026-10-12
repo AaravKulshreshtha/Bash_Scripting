@@ -25,12 +25,12 @@ stat(){
 
 echo " Setup $COMPONENT repo "
 
-echo '[mongodb-org-4.2]
+echo '[mongodb-org-7.0]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
+baseurl=https://mongodb.org
 gpgcheck=1
 enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc' > /etc/yum.repos.d/mongodb.repo
+gpgkey=https://mongodb.com' > /etc/yum.repos.d/mongodb.repo
 
 stat $?
 
