@@ -82,18 +82,18 @@ unzip mongodb.zip   &>> LOGPATH
 stat $?
 
 echo -n " Enter mongodb-main Folder : "
-cd mongodb-main
+cd mongodb-main &>> LOGPATH
 stat $?
 
  echo -n " Inserting Catalogue Schema : "
 
- mongosh < catalogue.js
+ mongosh < catalogue.js &>> LOGPATH
  stat $?
 
 
  echo -n " Inserting user Schema : "
 
- mongosh < users.js 
+ mongosh < users.js  &>> LOGPATH
  stat $?
 
   echo "--------------------------------- Mongo DB Configuration Finished ------------------------------------"
