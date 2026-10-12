@@ -27,10 +27,10 @@ echo -n " Setup $COMPONENT repo :  "
 
 echo '[mongodb-org-7.0]
 name=MongoDB Repository
-baseurl=https://mongodb.org
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/7.0/$basearch/
 gpgcheck=1
 enabled=1
-gpgkey=https://mongodb.com' > /etc/yum.repos.d/mongodb.repo
+gpgkey=https://pgp.mongodb.com/server-7.0.asc' > /etc/yum.repos.d/mongodb.repo
 
 stat $?
 
