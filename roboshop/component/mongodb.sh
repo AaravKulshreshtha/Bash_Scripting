@@ -77,14 +77,13 @@ echo -n "RE-Starting $COMPONENT : "
   cd /tmp
   stat $?
 
-  echo -n " Unzip MongoDB Schema : "
-  unzip mongodb.zip &>> LOGPATH
-  stat $?
+echo -n " Unzip MongoDB Schema : "
+unzip mongodb.zip   &>> LOGPATH
+stat $?
 
-   echo -n " Enter mongodb-main Folder : "
-
- cd mongodb-main
-  stat $?
+echo -n " Enter mongodb-main Folder : "
+cd mongodb-main
+stat $?
 
  echo -n " Inserting Catalogue Schema : "
 
