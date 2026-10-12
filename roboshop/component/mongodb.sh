@@ -5,12 +5,13 @@ echo "--------------------------------- Mongo DB Configuration Start -----------
 # Checking weather run with Sudo or Not 
 
 ID=$(id -u)
+
 if [ ID -ne 0 ] ; then
     echo "This script supposed to be run as root user"
     exit 1
 fi
 
-COMPONENT=$1
+COMPONENT="MongoDB"
 LOGPATH="/tmp/$1.log"
 
 stat(){
