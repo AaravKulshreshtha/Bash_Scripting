@@ -72,29 +72,29 @@ echo -n "RE-Starting $COMPONENT : "
  curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
   stat $?
 
-  echo " Enter TMP Folder : "
+  echo -n " Enter TMP Folder : "
 
   cd /tmp
   stat $?
 
-  echo " Unzip MongoDB Schema : "
-  unzip mongodb.zip
+  echo -n " Unzip MongoDB Schema : "
+  unzip mongodb.zip &>> LOGPATH
   stat $?
 
-   echo " Enter mongodb-main Folder : "
+   echo -n " Enter mongodb-main Folder : "
 
  cd mongodb-main
   stat $?
 
- echo " Inserting Catalogue Schema : "
+ echo -n " Inserting Catalogue Schema : "
 
- mongo < catalogue.js
-  stat $?
+ mongosh < catalogue.js
+ stat $?
 
 
- echo " Inserting user Schema : "
+ echo -n " Inserting user Schema : "
 
-mongo < users.js 
-  stat $?
+ mongosh < users.js 
+ stat $?
 
   echo "--------------------------------- Mongo DB Configuration Finished ------------------------------------"
