@@ -23,7 +23,7 @@ stat(){
 }
 
 
-echo " Setup $COMPONENT repo "
+echo -n " Setup $COMPONENT repo :  "
 
 echo '[mongodb-org-7.0]
 name=MongoDB Repository
@@ -36,7 +36,7 @@ stat $?
 
 echo -n " Start Installating $COMPONENT : "
 
- yum install -y mongodb-org  &>> LOGPATH
+ yum install -y mongodb-org  
 
  stat $?
 
