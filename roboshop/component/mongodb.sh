@@ -38,7 +38,7 @@ stat $?
 
 echo -n " Start Installating $COMPONENT : "
 
- yum install -y mongodb-org  
+ yum install -y mongodb-org  &>> LOGPATH
 
  stat $?
 
