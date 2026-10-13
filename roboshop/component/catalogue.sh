@@ -1,6 +1,6 @@
 #!bin/bash
 
-echo "--------------------------------- Catalogue Configuration Start ---------------------------------"
+echo "--------------------------------- Catalogue Configuration Start ---------------------------------\n\t"
 
 # Checking weather script run with root user ?
 
