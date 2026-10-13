@@ -13,7 +13,7 @@ COMPONENT=$1
 LOGPATH=/tmp/$1.log
 
 stat () {
-    if [ $1 -eq 0 ] ; then
+    if [ $1 -nq 0 ] ; then
         echo -e "\e[32m Success \e[0m "
     else
         echo -r "\e[31m Failure \e[0m "
@@ -27,7 +27,37 @@ stat $?
 
 
 echo -n "User Creation for configure $COMPONENT : "
-useradd roboshop
+id roboshop -u
+if [ $? -nq 0 ] ; then
+    useradd roboshop
+    stat $?
+else
+    echo -e "\e[33m Skipping \e[0m"
+
+fi
+
+echo -n " Downloading File for $COMPONENT : "
+curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
 stat $?
+
+echo -n "extracting $COMPONENT : "
+cd /home/roboshop
+unzip /tmp/catalogue.zip
+stat $?
+
+echo -n "Configure permission : "
+mv /home/roboshop/catalogue-main /home/roboshop/catalogue
+chown -r roboshop:roboshop /home/roboshop/catalogue/
+stat $?
+
+echo -n "Installing NPM : "
+cd /home/roboshop/catalogue
+npm install 
+stat $?
+
+
+
+
+
 
 
