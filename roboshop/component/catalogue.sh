@@ -1,6 +1,6 @@
 #!bin/bash
 
-echo "--------------------------------- Catalogue Configuration Start ---------------------------------\n\t"
+echo "--------------------------------- Catalogue Configuration Start ---------------------------------"
 
 # Checking weather script run with root user ?
 
@@ -25,5 +25,9 @@ echo -n " Start Installing Node JS for $COMPONENT : "
 yum install nodejs make gcc-c++ -y   &>>LOGPATH
 stat $?
 
+
+echo -n "User Creation for configure $COMPONENT : "
+useradd roboshop
+stat $?
 
 
