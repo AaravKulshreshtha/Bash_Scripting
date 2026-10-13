@@ -28,7 +28,7 @@ stat $?
 
 echo -n "User Creation for configure $COMPONENT : "
 id roboshop -u
-if [ $? -nq 0 ] ; then
+if [ $? -ne 0 ] ; then
     useradd roboshop
     stat $?
 else
