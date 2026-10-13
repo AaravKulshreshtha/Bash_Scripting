@@ -13,7 +13,7 @@ COMPONENT=$1
 LOGPATH=/tmp/$1.log
 
 stat () {
-    if [ $1 -nq 0 ] ; then
+    if [ $1 -ne 0 ] ; then
         echo -e "\e[32m Success \e[0m "
     else
         echo -r "\e[31m Failure \e[0m "
