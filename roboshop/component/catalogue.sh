@@ -47,7 +47,7 @@ stat $?
 
 echo -n "Configure permission : "
 mv /home/roboshop/catalogue-main /home/roboshop/catalogue
-chown -r roboshop:roboshop /home/roboshop/catalogue/   
+chown -R roboshop:roboshop /home/roboshop/catalogue/   
 stat $?
 
 echo -n "Installing NPM : "
