@@ -14,14 +14,14 @@ LOGPATH=/tmp/$1.log
 
 stat () {
     if [ $1 -eq 0] ; then
-        echo -e "/e[32m Success /e[0m"
+        echo -e "\e[32m Success \e[0m "
     else
-        echo -r "/e[33m Failure /e[0m"
+        echo -r "\e[31m Failure \e[0m "
     fi
 }
 
 echo -n " Start Installing Node JS for $COMPONENT : "
-yum install nodejs make gcc-c++ -y 
+yum install nodejs make gcc-c++ -y   $>>LOGPATH
 stat $?
 
 
