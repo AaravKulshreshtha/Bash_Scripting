@@ -37,22 +37,22 @@ else
 fi
 
 echo -n " Downloading File for $COMPONENT : "
-curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"  &>>LOGPATH
 stat $?
 
 echo -n "extracting $COMPONENT : "
 cd /home/roboshop
-unzip /tmp/catalogue.zip
+unzip /tmp/catalogue.zip &>>LOGPATH
 stat $?
 
 echo -n "Configure permission : "
 mv /home/roboshop/catalogue-main /home/roboshop/catalogue
-chown -r roboshop:roboshop /home/roboshop/catalogue/
+chown -r roboshop:roboshop /home/roboshop/catalogue/   
 stat $?
 
 echo -n "Installing NPM : "
 cd /home/roboshop/catalogue
-npm install 
+npm install  &>>LOGPATH
 stat $?
 
 
