@@ -37,12 +37,12 @@ else
 fi
 
 echo -n " Downloading user files : "
-curl -s -L -o /tmp/user.zip "https://github.com/roboshop-devops-project/user/archive/main.zip" &>>LOGPATH
+curl -s -L -o /tmp/user.zip "https://github.com/roboshop-devops-project/user/archive/main.zip"   &>>LOGPATH
 stat $?
 
 echo -n "Unzip Files : "
 cd /home/roboshop
-unzip /tmp/user.zip &>>LOGPATH
+unzip /tmp/user.zip  &>>LOGPATH
 stat $?
 
 echo " Configure permissions of $COMPONENT  : "
