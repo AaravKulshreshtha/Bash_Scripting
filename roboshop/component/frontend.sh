@@ -69,7 +69,7 @@ mv localhost.conf /etc/nginx/default.d/roboshop.conf
 stat $?
 
 echo -n "raplacing the catlaogue IP in API : "
-sed -i -e "/catalogue/s/172.31.24.9/172.31.31.238/" /etc/nginx/default.d/roboshop.conf
+sed -i -e "/catalogue/s/localhost/172.31.31.238/" /etc/nginx/default.d/roboshop.conf
 stat $?
 
 
