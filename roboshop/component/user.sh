@@ -28,7 +28,7 @@ stat $?
 
 
 echo -n "Creating Application user : "
-id roboshop -u
+id roboshop -u  &>>LOGPATH
 if [ $? -ne 0 ] ; then
     useradd robosop
     stat $?
@@ -37,33 +37,33 @@ else
 fi
 
 echo -n " Downloading user files : "
-curl -s -L -o /tmp/user.zip "https://github.com/roboshop-devops-project/user/archive/main.zip"
+curl -s -L -o /tmp/user.zip "https://github.com/roboshop-devops-project/user/archive/main.zip" &>>LOGPATH
 stat $?
 
 echo -n "Unzip Files : "
 cd /home/roboshop
-unzip /tmp/user.zip
+unzip /tmp/user.zip &>>LOGPATH
 stat $?
 
 echo " Configure permissions of $COMPONENT  : "
 mv /home/roboshop/user-main /home/roboshop/user
-chown -R roboshop:roboshop /home/roboshop/user/
+chown -R roboshop:roboshop /home/roboshop/user/ &>>LOGPATH
 stat $?
 
 echo -n " Installing NPM : "
-cd /home/roboshop/user
-npm install
+cd /home/roboshop/user  
+npm install  &>>LOGPATH
 stat $?
 
 echo -n "Creating $COMPONENT service : "
-mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service
+mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service  &>>LOGPATH
 stat $?
 
 echo -n  "reloading  $COMPONENT Dameon : "
-systemctl daemon-reload
+systemctl daemon-reload  &>>LOGPATH
 
 echo -n  "Enbaling  $COMPONENT Service : "
-systemctl enable user
+systemctl enable user  &>>LOGPATH
 
 echo -n  "Starting $COMPONENT Service : "
-systemctl start user
+systemctl start user  &>>LOGPATH
