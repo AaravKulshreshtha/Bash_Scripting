@@ -21,9 +21,19 @@ stat() {
 }
 
 
-echo -n "Start Installing $COMPONENT : "
+echo -n "Start Installing Epel : "
 yum install epel-release yum-utils -y   &>>LOGPATH
+stat $? 
+
+
+echo -n "Start Configuring $COMPONENT dir : "
 yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y  &>>LOGPATH
+stat $? 
+
+echo -n "Start enabling  $COMPONENT : "
 yum-config-manager --enable remi  &>>LOGPATH
+stat $? 
+
+echo -n "Start Installing $COMPONENT : "
 yum install redis -y  &>>LOGPATH
 stat $? 
