@@ -61,12 +61,15 @@ stat $?
 
 echo -n  "reloading  $COMPONENT Dameon : "
 systemctl daemon-reload  &>>LOGPATH
+stat $?
 
 echo -n  "Enbaling  $COMPONENT Service : "
 systemctl enable user  &>>LOGPATH
+stat $?
 
 echo -n  "Starting $COMPONENT Service : "
 systemctl start user  &>>LOGPATH
+stat $?
 
 echo -n " Updating Redis ip : "
 sed -i -e "s/REDIS_ENDPOINT/172.22.26.181/ /etc/systemd/system/user.service
@@ -76,4 +79,9 @@ stat $?
 echo -n " Updating mongoDB ip : "
 sed -i -e "s/MONGO_ENDPOINT/172.22.26.181/ /etc/systemd/system/user.service
 stat $?
+
+echo -n  "RE-Starting $COMPONENT Service : "
+systemctl restart user  &>>LOGPATH
+stat $?
+
 echo "----------------------------------User Configuration FINISH-------------------------------------------"
