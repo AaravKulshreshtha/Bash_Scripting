@@ -68,6 +68,12 @@ echo -n "raplacing the $Component config file : "
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 stat $?
 
+echo -n "raplacing the catlaogue IP in API : "
+sed -i -e "Catalogue/s/localhost/172.31.27.47/" /ect/nginx/default.d/roboshop.conf
+stat $?
+
+
+
 
 echo -n "restarting the $Component  : "
 systemctl restart nginx 
