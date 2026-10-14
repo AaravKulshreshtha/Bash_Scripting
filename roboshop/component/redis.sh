@@ -46,10 +46,15 @@ sed -i -e '/bind/s/127.0.0.1/0.0.0.0/' /etc/redis6/redis6.conf
 stat $? 
 
 
+
 echo -n "Start enabling  $COMPONENT : "
 systemctl enable redis6 &>>LOGPATH
 stat $? 
 
 echo -n "Start enabling  $COMPONENT : "
 systemctl start redis6 &>>LOGPATH
+stat $? 
+
+echo -n "Re-Start enabling  $COMPONENT : "
+systemctl restart redis6 &>>LOGPATH
 stat $? 
