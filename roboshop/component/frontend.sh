@@ -72,6 +72,10 @@ echo -n "raplacing the catlaogue IP in API : "
 sed -i -e "/catalogue/s/localhost/172.31.31.238/" /etc/nginx/default.d/roboshop.conf
 stat $?
 
+echo -n "raplacing the User IP in API : "
+sed -i -e "/user/s/localhost/172.31.20.31/" /etc/nginx/default.d/roboshop.conf
+stat $?
+
 
 
 
