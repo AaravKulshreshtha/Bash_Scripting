@@ -27,9 +27,9 @@ stat $?
 
 
 echo -n "User Creation for configure $COMPONENT : "
-id roboshop -u
+id roboshop -u   &>>LOGPATH
 if [ $? -ne 0 ] ; then
-    useradd roboshop
+    useradd roboshop  &>>LOGPATH
     stat $?
 else
     echo -e "\e[33m Skipping \e[0m"
@@ -56,11 +56,11 @@ npm install  &>>LOGPATH
 stat $?
 
 echo -n "Update mongoDB IP in $COMPONENT : "
-sed -i -e 's/MONGO_DNSNAME/172.22.26.11/' /home/roboshop/catalogue/systemd.service  &>>LOGPATH
+sed -i -e 's/MONGO_DNSNAME/172.22.26.11/' /home/roboshop/catalogue/systemd.service  
 stat $?
 
 echo -n "Create service of  $COMPONENT : "
-mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service  &>>LOGPATH
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service  
 stat $?
 
 
