@@ -42,7 +42,7 @@ dnf install redis6 -y &>>LOGPATH
 stat $? 
 
 echo -n "Changing IP address of $COMPONENT : "
-sed -i -e 's/127.0.0.0/0.0.0.0/' /etc/redis6/redis6.conf
+sed -i -e '/bind/s/127.0.0.0/0.0.0.0/' /etc/redis6/redis6.conf
 stat $? 
 
 
