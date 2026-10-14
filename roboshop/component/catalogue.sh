@@ -59,6 +59,19 @@ echo -n "Update mongoDB IP in $COMPONENT : "
 sed -i -e 's/MONGO_DNSNAME/172.22.26.11' /home/roboshop/catalogue/systemd.service
 stat $?
 
+echo -n "Create service of  $COMPONENT : "
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+stat $?
+
+
+echo -n "Starting  daemon $COMPONENT service : "
+systemctl daemon-reload
+stat $?
+
+echo -n "Starting $COMPONENT service : "
+systemctl start catalogue
+systemctl enable catalogue
+stat $?
 
 
 
