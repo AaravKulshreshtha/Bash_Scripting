@@ -41,6 +41,11 @@ echo -n "Start Installing $COMPONENT : "
 dnf install redis6 -y &>>LOGPATH
 stat $? 
 
+echo -n "Changing IP address of $COMPONENT : "
+sed -i -e 's/127.0.0.0/0.0.0.0/' /ect/redis6/redis6.conf
+stat $? 
+
+
 echo -n "Start enabling  $COMPONENT : "
 systemctl enable redis6 &>>LOGPATH
 stat $? 
