@@ -38,5 +38,5 @@ sudo dnf install -y yum-utils
 stat $? 
 
 echo -n "Start Installing $COMPONENT : "
-dnf install redis -y 
+dnf install redis6 -y 
 stat $? 
