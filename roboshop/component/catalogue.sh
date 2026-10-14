@@ -62,7 +62,7 @@ mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.servic
 stat $?
 
 echo -n "Update mongoDB IP in $COMPONENT : "
-sed -i -e 's/MONGO_DNSNAME/172.31.31.71/' /etc/systemd/system/catalogue.service 
+sed -i -e 's/MONGO_DNSNAME/172.31.16.57/' /etc/systemd/system/catalogue.service 
 stat $?
 
 
