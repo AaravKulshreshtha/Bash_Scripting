@@ -14,16 +14,16 @@ LOGPATH=/etc/$1.log
 
 stat() {
     if [ $1 -eq 0 ] ; then
-        echo "\e[32m Success \e[0m "
+        echo -e "\e[32m Success \e[0m "
     else
-        echo "\e[31m Failure \e[0m "
+        echo -e "\e[31m Failure \e[0m "
     fi
 }
 
 
 echo -n "Start Installing $COMPONENT : "
-yum install epel-release yum-utils -y
-yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
-yum-config-manager --enable remi
-yum install redis -y
+yum install epel-release yum-utils -y   &>>LOGPATH
+yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y  &>>LOGPATH
+yum-config-manager --enable remi  &>>LOGPATH
+yum install redis -y  &>>LOGPATH
 stat $? 
