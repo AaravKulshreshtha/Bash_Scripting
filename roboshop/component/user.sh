@@ -23,7 +23,7 @@ stat() {
 }
 
 echo -n "Start Installing Node Js : "
-yum install nodejs make gcc-c++ -y 
+yum install nodejs make gcc-c++ -y &>>LOGPATH
 stat $? 
 
 
