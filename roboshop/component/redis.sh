@@ -4,7 +4,7 @@ echo "---------------------------------Redis Configuration Start----------------
 
 # Checking weather user is Root or not ?
 
-ID=id -u
+ID=$(id -u)
 if [ $ID -ne 0 ] ; then
     echo " This script supposed to be run as administartor. "
 fi
