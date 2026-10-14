@@ -25,7 +25,7 @@ sudo dnf upgrade -y
 stat $?
 
 echo -n "Start Installing Epel : "
-yum sudo dnf install -y spal-release   &>>LOGPATH
+sudo dnf install -y spal-release   &>>LOGPATH
 stat $? 
 
 
@@ -38,5 +38,5 @@ sudo dnf install -y yum-utils
 stat $? 
 
 echo -n "Start Installing $COMPONENT : "
-yum install redis -y  &>>LOGPATH
+dnf install redis -y  &>>LOGPATH
 stat $? 
