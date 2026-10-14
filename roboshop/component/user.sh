@@ -72,12 +72,12 @@ systemctl start user  &>>LOGPATH
 stat $?
 
 echo -n " Updating Redis ip : "
-sed -i -e "REDIS_HOST/s/172.22.26.181/172.31.17.198/" /etc/systemd/system/user.service
+sed -i -e "/REDIS_HOST/s/172.22.26.181/172.31.17.197/" /etc/systemd/system/user.service
 stat $?
 
 
 echo -n " Updating mongoDB ip : "
-sed -i -e "mongodb/s/172.22.26.181/172.31.23.14/" /etc/systemd/system/user.service
+sed -i -e "/MONGO_URL/s/172.22.26.181/172.31.23.14/" /etc/systemd/system/user.service
 stat $?
 
 echo -n  "RE-Starting $COMPONENT Service : "
