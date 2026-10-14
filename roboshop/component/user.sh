@@ -46,7 +46,7 @@ unzip /tmp/user.zip  &>>LOGPATH
 stat $?
 
 echo -n " Configure permissions of $COMPONENT  : "
-mv /home/roboshop/user-main /home/roboshop/user
+mv /home/roboshop/user-main /home/roboshop/user &>>LOGPATH
 chown -R roboshop:roboshop /home/roboshop/user/ &>>LOGPATH
 stat $?
 
@@ -72,7 +72,7 @@ systemctl start user  &>>LOGPATH
 stat $?
 
 echo -n " Updating Redis ip : "
-sed -i -e "s/REDIS_ENDPOINT/172.22.26.181/" /etc/systemd/system/user.service
+sed -i -e "s/REDIS_ENDPOINT/172.31.17.197/" /etc/systemd/system/user.service
 stat $?
 
 
