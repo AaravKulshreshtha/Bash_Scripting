@@ -22,7 +22,7 @@ stat () {
 
 
 echo -n " Start Installing Node JS for $COMPONENT : "
-dnf install nodejs make gcc-c++ -y   
+dnf install nodejs make gcc-c++ -y   &>>LOGPATH
 stat $?
 
 
