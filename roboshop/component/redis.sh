@@ -21,7 +21,7 @@ stat() {
 }
 
 echo -n "Start Upgrading OS : "
-sudo dnf upgrade -y
+sudo dnf upgrade -y &>>LOGPATH
 stat $?
 
 echo -n "Start Installing Epel : "
