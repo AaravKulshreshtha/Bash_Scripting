@@ -10,7 +10,7 @@ if [ $ID -ne 0 ] ; then
 fi
 
 COMPONENT=$1
-LOGPATH=/etc/$1.log
+LOGPATH=/tmp/$1.log
 
 stat() {
     if [ $1 -eq 0 ] ; then
@@ -58,3 +58,5 @@ stat $?
 echo -n "Re-Start enabling  $COMPONENT : "
 systemctl restart redis6 &>>LOGPATH
 stat $? 
+
+echo "---------------------------------Redis Configuration FINISH--------------------------------------"
