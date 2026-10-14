@@ -20,18 +20,21 @@ stat() {
     fi
 }
 
+echo -n "Start Upgrading OS : "
+sudo dnf upgrade -y
+stat $?
 
 echo -n "Start Installing Epel : "
-yum install epel-release yum-utils -y   &>>LOGPATH
+yum sudo dnf install -y spal-release   &>>LOGPATH
 stat $? 
 
 
 echo -n "Start Configuring $COMPONENT dir : "
-yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y  &>>LOGPATH
+sudo dnf repolist
 stat $? 
 
 echo -n "Start enabling  $COMPONENT : "
-yum-config-manager --enable remi  &>>LOGPATH
+sudo dnf install -y yum-utils
 stat $? 
 
 echo -n "Start Installing $COMPONENT : "
