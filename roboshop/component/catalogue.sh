@@ -56,21 +56,21 @@ npm install  &>>LOGPATH
 stat $?
 
 echo -n "Update mongoDB IP in $COMPONENT : "
-sed -i -e 's/MONGO_DNSNAME/172.22.26.11' /home/roboshop/catalogue/systemd.service
+sed -i -e 's/MONGO_DNSNAME/172.22.26.11/' /home/roboshop/catalogue/systemd.service  &>>LOGPATH
 stat $?
 
 echo -n "Create service of  $COMPONENT : "
-mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service  &>>LOGPATH
 stat $?
 
 
 echo -n "Starting  daemon $COMPONENT service : "
-systemctl daemon-reload
+systemctl daemon-reload  &>>LOGPATH
 stat $?
 
 echo -n "Starting $COMPONENT service : "
-systemctl start catalogue
-systemctl enable catalogue
+systemctl start catalogue  &>>LOGPATH
+systemctl enable catalogue  &>>LOGPATH
 stat $?
 
 
