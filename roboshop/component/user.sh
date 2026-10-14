@@ -67,3 +67,5 @@ systemctl enable user  &>>LOGPATH
 
 echo -n  "Starting $COMPONENT Service : "
 systemctl start user  &>>LOGPATH
+
+echo "----------------------------------User Configuration FINISH-------------------------------------------"
