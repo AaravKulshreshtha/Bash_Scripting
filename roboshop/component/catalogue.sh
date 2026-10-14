@@ -37,7 +37,7 @@ else
 fi
 
 echo -n " Downloading File for $COMPONENT : "
-curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"  &>>LOGPATH
+curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"  
 stat $?
 
 echo -n "extracting $COMPONENT : "
@@ -54,6 +54,7 @@ echo -n "Installing NPM : "
 cd /home/roboshop/catalogue
 npm install  &>>LOGPATH
 stat $?
+
 
 
 
