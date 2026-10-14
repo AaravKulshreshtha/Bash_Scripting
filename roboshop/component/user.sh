@@ -77,7 +77,7 @@ stat $?
 
 
 echo -n " Updating mongoDB ip : "
-sed -i -e "/MONGO_URL/s/172.22.26.181/172.31.23.14/" /etc/systemd/system/user.service
+sed -i -e "/MONGO_URL/s/172.31.17.197/172.31.23.14/" /etc/systemd/system/user.service
 stat $?
 
 echo -n  "RE-Starting $COMPONENT Service : "
