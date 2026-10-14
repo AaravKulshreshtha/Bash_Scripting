@@ -72,7 +72,7 @@ systemctl start user  &>>LOGPATH
 stat $?
 
 echo -n " Updating Redis ip : "
-sed -i -e "REDIS_HOST/s/172.22.26.181/172.31.17.197/" /etc/systemd/system/user.service
+sed -i -e "REDIS_HOST/s/172.22.26.181/172.31.17.198/" /etc/systemd/system/user.service
 stat $?
 
 
