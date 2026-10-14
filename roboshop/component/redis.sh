@@ -30,13 +30,21 @@ stat $?
 
 
 echo -n "Start Configuring $COMPONENT dir : "
-sudo dnf repolist
+sudo dnf repolist  &>>LOGPATH
 stat $? 
 
 echo -n "Start enabling  $COMPONENT : "
-sudo dnf install -y yum-utils
+sudo dnf install -y yum-utils  &>>LOGPATH
 stat $? 
 
 echo -n "Start Installing $COMPONENT : "
-dnf install redis6 -y 
+dnf install redis6 -y &>>LOGPATH
+stat $? 
+
+echo -n "Start enabling  $COMPONENT : "
+systemctl enable redis6 &>>LOGPATH
+stat $? 
+
+echo -n "Start enabling  $COMPONENT : "
+systemctl start redis6 &>>LOGPATH
 stat $? 
