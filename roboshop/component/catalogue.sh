@@ -55,6 +55,10 @@ cd /home/roboshop/catalogue
 npm install  &>>LOGPATH
 stat $?
 
+echo -n "Update mongoDB IP in $COMPONENT : "
+sed -i -e '/s/MONGO_DNSNAME/172.22.26.11' /home/roboshop/catalogue/systemd.service
+stat $?
+
 
 
 
