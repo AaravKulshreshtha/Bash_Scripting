@@ -30,7 +30,7 @@ stat $?
 echo -n "Creating Application user : "
 id roboshop -u  &>>LOGPATH
 if [ $? -ne 0 ] ; then
-    useradd robosop
+    useradd roboshop
     stat $?
 else
     echo -e "\e[33m Skipping \e[0m "
