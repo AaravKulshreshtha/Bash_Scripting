@@ -8,5 +8,4 @@ aws ec2 run-instances \
     --instance-type t2.micro \
     --key-name MyKeyPair \
     --security-group-ids $SGID \
-    --subnet-id subnet-0123456789abcdef0 \
     --count 1
