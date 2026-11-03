@@ -1,6 +1,6 @@
 #!/bin/bash
 
-AMI_ID="ami-056b35f582f6afbe7"
+AMI_ID="resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
 SGID="sg-08c5594f157c76f58"
 
 aws ec2 run-instances \
